@@ -1,5 +1,5 @@
 import QtQuick 2.12
-
+import QtQuick.Shapes 1.15
 FocusScope {
     id: root
 
@@ -14,11 +14,13 @@ FocusScope {
             || key == Qt.Key_Down;
     }
 
-    Rectangle {
+    LinearGradient {
         anchors.fill: parent
+        start: Qt.point(width,0)
+        end: Qt.point(0,height)
         gradient: Gradient {
-            GradientStop { position: 0.1; color: "#30383f" }
-            GradientStop { position: 0.8; color: "#08080f" }
+            GradientStop { position: 0.1; color: "#03A0FD" }
+            GradientStop { position: 0.8; color: "#010446" }
         }
     }
 
