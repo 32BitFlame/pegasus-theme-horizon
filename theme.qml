@@ -1,5 +1,5 @@
-import QtQuick 2.12
-import QtQuick.Shapes 1.15
+import QtQuick 2.11
+import QtGraphicalEffects 1.12
 FocusScope {
     id: root
 
@@ -21,6 +21,22 @@ FocusScope {
         gradient: Gradient {
             GradientStop { position: 0.1; color: "#03A0FD" }
             GradientStop { position: 0.8; color: "#010446" }
+        }
+    }
+    
+    LinearGradient {
+        width: 300
+        height: 198
+        anchors.left: parent.horizontalCenter
+        anchors.top: parent.verticalCenter
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        source: Image { source: "snes_img.png" }
+        start: Qt.point(0,0)
+	end: Qt.point(0,height)
+        gradient: Gradient {
+            GradientStop { position: 0.5; color : "#ffffff" }
+            GradientStop { position: 0.8; color: "transparent" }
         }
     }
 
